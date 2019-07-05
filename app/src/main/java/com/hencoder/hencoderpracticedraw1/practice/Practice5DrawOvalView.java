@@ -2,6 +2,7 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -23,7 +24,12 @@ public class Practice5DrawOvalView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
 //        练习内容：使用 canvas.drawOval() 方法画椭圆
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawOval(350,400,750,600,paint);
+        ///右边值必须大于左边，底部必须大于头部才会显示出来。
+
     }
 }
