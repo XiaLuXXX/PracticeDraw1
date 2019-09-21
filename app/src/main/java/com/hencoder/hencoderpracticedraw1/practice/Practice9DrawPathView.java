@@ -28,17 +28,22 @@ public class Practice9DrawPathView extends View {
 //        练习内容：使用 canvas.drawPath() 方法画心形
         Paint paint = new Paint();
         paint.setAntiAlias(true);
-
-        Path path = drawPath();
-
-
-
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawPath(drawPath(),paint);
+//        paint.setStrokeWidth(5f);
+        canvas.drawPoint(400f,400f,paint);
     }
 
     private Path drawPath(){
         Path path = new Path();
-//        path.
+        path.setFillType(Path.FillType.WINDING);
 
+//        path.addCircle(550,400,80, Path.Direction.CCW);
+        path.arcTo(400,400,500,500,150,210,true);
+        path.arcTo(500,400,600,500,180,200,true);
+        path.lineTo(500,600);
+        path.lineTo(403,470);
         return path;
+
     }
 }

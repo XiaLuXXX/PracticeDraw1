@@ -23,8 +23,9 @@ public class Practice11PieChartView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
 //        综合练习
 //        练习内容：使用各种 Canvas.drawXXX() 方法画饼图
+
+
     }
 }
